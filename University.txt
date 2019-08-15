@@ -1,0 +1,43 @@
+#include<stdio.h>
+#include<conio.h>
+
+int valid(int, float);
+
+struct Student{
+	char student_id[10];
+	int age;
+	float marks;
+	
+}s1;
+
+
+int valid(int age, float marks){
+	
+	if(age>=20 && (marks<=100 && marks >=0)){
+		return 1;
+	}
+	else
+		return 0;
+}
+
+
+
+void main(){
+	
+	printf("Enter the student id");
+	gets(s1.student_id);
+	printf("Welcome %s\n", s1.student_id);
+	printf("enter the age, and marks");
+	fflush(stdin);
+	scanf("%d%f", &s1.age, &s1.marks);
+	if(valid(s1.age, s1.marks) == 1){
+		if(s1.marks>=65){
+			printf("You are qualified!");
+		}
+		else
+			printf("Sorry your makrs do not meet our standards");
+	}
+	else
+		printf("Invalid details");
+	
+}
