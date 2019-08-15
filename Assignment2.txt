@@ -1,0 +1,28 @@
+#include<stdio.h>
+#include<conio.h>
+#include<math.h>
+void swap(int *num1,int *num2);
+int main()
+{
+  int *num1,*num2;
+  printf("enter two numbers:");
+  scanf("%d,%d",&num1,&num2);
+  printf("Before swapping:");
+  printf("Value of number 1:%d/n",num1);
+  printf("Value of number 2:%d/n/n",num2);
+
+swap(&num1,&num2);
+
+printf("After swapping");
+printf("Value of number 1:%d/n",num1);
+printf("Value of number 2;%d/n/n",num2);
+
+return 0;
+}
+void swap(int *num1,int *num2)
+{
+  int temp;
+  temp=*num1;
+  *num1=*num2;
+  *num2=temp;
+}
